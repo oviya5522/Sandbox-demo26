@@ -1,121 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import pic9 from "../assets/pic9.png";
 
+const content = [
+  {
+    name: "Coriss Ambady",
+    role: "Financial Analyst",
+    text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper.",
+  },
+  {
+    name: "Cory Zamora",
+    role: "Marketing Specialist",
+    text: "Cras justo odio consectetur nulla dapibus curabitur blandit faucibus. Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+  },
+  {
+    name: "Nikolas Brooten",
+    role: "Sales Manager",
+    text: "Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit faucibus dolor auctor.",
+  },
+];
+
 const Part5 = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div className="bg-white">
-      <div className="flex justify-center items-center py-25 ">
-        <div className=" w-5/6 h-[700px] rounded-4xl pt-20  bg-[#f0f0f8]">
-          <p className="text-[#605dba] text-[18px] text-center font-semibold">
-            Happy Customers
-          </p>
-          <p className=" text-[#343f52] text-[38px] pt-4 text-center font-semibold mx-[30] leading-13">
-            Don't take our word for it. See what <br />
-            <span>customers are saying about us.</span>
-          </p>
-          <div className="pt-4 flex gap-17">
-            <div className="w-2/5 items-center">
-              <img src={pic9} alt="" className="h-[320px]  pt-5 pl-35" />
+      <div className="flex justify-center items-center py-20">
+        <div className="w-5/6 rounded-4xl pt-16 bg-[#f0f0f8] lg:h-[700px]">
+          <div className="text-center px-6 sm:px-10">
+            <p className="text-[#605dba] text-[18px] sm:text-[20px] font-semibold">
+              Happy Customers
+            </p>
+            <p className="text-[#343f52] font-semibold pt-4 leading-tight text-[24px] sm:text-[30px] lg:text-[38px] max-w-[650px] mx-auto">
+              <span className="block lg:hidden whitespace-pre-line">
+                {
+                  "Don't take our\nword for it. See\nwhat customers are saying about\nus."
+                }
+              </span>
+              <span className="hidden lg:block">
+                Don't take our word for it. See what <br />
+                <span className="text-[#605dba]">
+                  customers are saying about us.
+                </span>
+              </span>
+            </p>
+          </div>
+
+          <div className="pt-10 flex flex-col lg:flex-row items-start gap-10 justify-center">
+            <div className="hidden lg:block w-auto">
+              <img src={pic9} alt="Customer" className="h-[320px]" />
             </div>
 
-            <div
-              id="manual-carousel"
-              class="relative w-[600px] h-90 pt-18  "
-              data-carousel="static"
-              data-carousel-interval="0"
-              data-carousel-slide="false"
-            >
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-59">
-                <div
-                  class=" duration-700 ease-in-out"
-                  data-carousel-item="active"
-                  data-carousel-interval="0"
-                  data-carousel-slide="false"
-                  data-carousel="pause"
-                >
-                  <p>
-                    <span class="ratings  inline-block relative w-20 h-[0.8rem] text-[1.2rem] leading-none before:text-[rgba(38,43,50,0.1)] after:inline-block after:not-italic after:font-normal after:absolute after:!text-[#fcc032] after:content-['\2605\2605\2605\2605\2605'] after:overflow-hidden after:left-0 after:top-0 before:inline-block before:not-italic before:font-normal before:absolute before:!text-[#fcc032] before:content-['\2605\2605\2605\2605\2605'] before:overflow-hidden before:left-0 before:top-0 five"></span>
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    “Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                    dolor auctor. Vestibulum ligula porta felis euismod semper.
-                    Cras justo odio consectetur nulla dapibus curabitur blandit
-                    faucibus.”
-                  </p>
-                  <p className="text-[#343f52] text-[20px] font-semibold pt-4">
-                    Coriss Ambady
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    Financial Analyst
-                  </p>
-                </div>
+            {/* carousel */}
+            <div className="w-full lg:w-auto flex justify-center">
+              <div className="flex flex-col px-4 sm:px-6 lg:px-0 max-w-full sm:max-w-[550px] lg:max-w-[400px]">
+                <p>
+                  <span className="inline-block text-[1.2rem] text-[#fcc032]">
+                    ★★★★★
+                  </span>
+                </p>
 
-                <div
-                  class="hidden duration-500 ease-in-out"
-                  data-carousel-item
-                  data-carousel-interval="0"
-                  data-carousel-slide="false"
-                >
-                  <p>
-                    <span class="ratings  inline-block relative w-20 h-[0.8rem] text-[1.2rem] leading-none before:text-[rgba(38,43,50,0.1)] after:inline-block after:not-italic after:font-normal after:absolute after:!text-[#fcc032] after:content-['\2605\2605\2605\2605\2605'] after:overflow-hidden after:left-0 after:top-0 before:inline-block before:not-italic before:font-normal before:absolute before:!text-[#fcc032] before:content-['\2605\2605\2605\2605\2605'] before:overflow-hidden before:left-0 before:top-0 five"></span>
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    “Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                    dolor auctor. Vestibulum ligula porta felis euismod semper.
-                    Cras justo odio consectetur nulla dapibus curabitur blandit
-                    faucibus.”
-                  </p>
-                  <p className="text-[#343f52] text-[20px] font-semibold pt-4">
-                    Cory Zamora
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    Marketing Specialist
-                  </p>
-                </div>
+                <p className="text-[16px] sm:text-[18px] lg:text-[16px] font-medium text-[#6c7485] mt-3 leading-[1.8] text-justify">
+                  {content[activeIndex].text}
+                </p>
 
-                <div
-                  class="hidden duration-500 ease-in-out"
-                  data-carousel-item
-                  data-carousel-interval="0"
-                  data-carousel-slide="false"
-                >
-                  <p>
-                    <span class="ratings  inline-block relative w-20 h-[0.8rem] text-[1.2rem] leading-none before:text-[rgba(38,43,50,0.1)] after:inline-block after:not-italic after:font-normal after:absolute after:!text-[#fcc032] after:content-['\2605\2605\2605\2605\2605'] after:overflow-hidden after:left-0 after:top-0 before:inline-block before:not-italic before:font-normal before:absolute before:!text-[#fcc032] before:content-['\2605\2605\2605\2605\2605'] before:overflow-hidden before:left-0 before:top-0 five"></span>
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    “Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                    dolor auctor. Vestibulum ligula porta felis euismod semper.
-                    Cras justo odio consectetur nulla dapibus curabitur blandit
-                    faucibus.”
-                  </p>
-                  <p className="text-[#343f52] text-[20px] font-semibold pt-4">
-                    Nikolas Brooten
-                  </p>
-                  <p className="text-[18px] font-medium text-[#777f91] mt-2 leading-[1.9]">
-                    Sales Manager
-                  </p>
-                </div>
-              </div>
+                <p className="text-[#343f52] text-[18px] lg:text-[16px] font-semibold pt-4">
+                  {content[activeIndex].name}
+                </p>
 
-              <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-14 space-x-3  ">
-                <button
-                  type="button"
-                  class="w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-300"
-                  aria-label="Slide 1"
-                  data-carousel-slide-to="0"
-                ></button>
-                <button
-                  type="button"
-                  class="w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-300"
-                  aria-label="Slide 2"
-                  data-carousel-slide-to="1"
-                ></button>
-                <button
-                  type="button"
-                  class="w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-300"
-                  aria-label="Slide 3"
-                  data-carousel-slide-to="2"
-                ></button>
+                <p className="text-[16px] lg:text-[14px]  text-[#6c7485] font-medium mt-1">
+                  {content[activeIndex].role}
+                </p>
+
+                <div className="flex justify-start mt-5 space-x-3">
+                  {content.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveIndex(i)}
+                      className={`w-2.5 h-2.5 rounded-full ${
+                        activeIndex === i ? "bg-[#605dba]" : "bg-gray-400"
+                      }`}
+                    ></button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

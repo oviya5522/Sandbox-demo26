@@ -2,95 +2,79 @@ import React from "react";
 import pic3 from "../assets/pic3.png";
 import ideas from "../assets/idea.svg";
 import innovative from "../assets/innovative.svg";
-import rapid from '../assets/rapid.svg'
-import headset from '../assets/headset.svg'
+import rapid from "../assets/rapid.svg";
+import headset from "../assets/headset.svg";
 
-const Part3= () => {
+const Part3 = () => {
+  const features = [
+    {
+      img: ideas,
+      title: "Creativity",
+      text: "Curabitur blandit lacus porttitor ridiculus mus blandit luctus magnis.",
+    },
+    {
+      img: innovative,
+      title: "Innovative Thinking",
+      text: "Curabitur blandit lacus porttitor ridiculus mus blandit luctus magnis.",
+    },
+    {
+      img: rapid,
+      title: "Rapid Solutions",
+      text: "Curabitur blandit lacus porttitor ridiculus mus blandit luctus magnis.",
+    },
+    {
+      img: headset,
+      title: "Top-Notch Support",
+      text: "Curabitur blandit lacus porttitor ridiculus mus blandit luctus magnis.",
+    },
+  ];
+
   return (
-    <div>
-      <section class="text-gray-600 body-font overflow-hidden bg-white">
-        <div class="container  pt-15 mx-auto bg-white">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
-              alt="ecommerce"
-              class="lg:w-1/2 lg:h-auto object-contain "
-              src={pic3}
-            />
-            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 class="text-xl text-[#605dba] font-semibold ">
-                Why Choose Us?
-              </h2>
-              <h1 class=" text-[#343f52] text-[38px] leading-12 font-semibold mt-4">
-                So here a few reasons why our valued customers choose us.
-              </h1>
-              {/* <div className="grid grid-col-2  gap-4">
-                <div className='flex gap-6'>
-                    <img src={ideas}  alt="ideas" className="h-7" />
-                    <div className="flex flex-col">
-                        <h1 className="text-[#343f52] font-semibold text-[20px]">Creativity</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    <div className='flex gap-6'>
-                    <img src={innovative}  alt="ideas" className="h-7" />
-                    <div className="flex flex-col">
-                        <h1 className="text-[#343f52] font-semibold text-[20px]">Innovative <br/>Thinking</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    
-                </div>
-                    </div>
-                <div>4</div>
-                <div>4</div>
-        
-              </div> */}
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-7 pt-5 bg-white">
-                <div class="bg-white rounded-lg text-center">
-                  <div className='flex gap-4'>
-                    <img src={ideas}  alt="ideas" className="h-9" />
-                    <div className="flex flex-col text-left">
-                        <h1 className="text-[#343f52] font-semibold text-[24px]">Creativity</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium text-[17px]">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    </div>
+    <section className="bg-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 px-6 lg:px-20 py-12">
+        <div className="lg:w-1/2 w-full flex justify-center lg:justify-start">
+          <img
+            src={pic3}
+            alt="ecommerce"
+            className="w-full lg:w-auto lg:max-w-[500px] object-contain"
+          />
+        </div>
+
+        <div className="lg:w-1/2 w-full">
+          <h2 className="text-[#605dba] font-semibold text-lg sm:text-xl leading-snug">
+            Why Choose Us?
+          </h2>
+          <h1 className="text-[#343f52] font-semibold text-[22px] sm:text-[32px] leading-snug w-full mt-4">
+            So here a few reasons
+            <br />
+            why our valued
+            <br />
+            customers choose us.
+          </h1>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg   border-none pt-2 text-left"
+              >
+                <div className="flex items-center gap-3">
+                  <img src={feature.img} alt={feature.title} className="h-9" />
+                  <h1 className="text-[#343f52] font-semibold text-[20px]">
+                    {feature.title}
+                  </h1>
                 </div>
 
-                <div class="  rounded-lg text-center">
-                  <div className='flex gap-4'>
-                    <img src={innovative}  alt="ideas" className="h-9" />
-                    <div className="flex flex-col text-left">
-                        <h1 className="text-[#343f52] font-semibold text-[24px]">Innovative <br/>Thinking</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium text-[17px]">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    </div>
-                    </div>
-
-                <div class="  rounded-lg text-center ">
-                 <div className='flex gap-4'>
-                    <img src={rapid}  alt="ideas" className="h-9" />
-                    <div className="flex flex-col text-left">
-                        <h1 className="text-[#343f52] font-semibold text-[24px]">Rapid Solutions</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium text-[17px]">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="  rounded-lg text-center">
-                 <div className='flex gap-4'>
-                    <img src={headset}  alt="ideas" className="h-9" />
-                    <div className="flex flex-col text-left">
-                        <h1 className="text-[#343f52] font-semibold text-[24px]">Top-Notch<br/> Support</h1>
-                        <p className="text-[#60697b] text-base/8 font-medium text-[17px]">Curabitur blandit<br/>lacus porttitor<br/>ridiculus mus.</p>
-                    </div>
-                    </div>
-                </div>
+                <p className="text-[#6c7485] text-[16px] leading-relaxed mt-2 ml-[42px] lg:ml-[46px] line-clamp-3">
+                  {feature.text}
+                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
 export default Part3;
-;
