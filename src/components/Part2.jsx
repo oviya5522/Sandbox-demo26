@@ -17,7 +17,7 @@ const Part2 = () => {
       <div className="text-center px-4 sm:px-8 lg:px-[120px]">
         <p className="text-[#605dba] font-semibold">What We Do?</p>
         <p
-          className="text-[#343f52] text-lg sm:text-xl md:text-2xl lg:text-[38px] font-semibold 
+          className="text-[#343f52] text-xl sm:text-2xl lg:text-[38px] font-semibold 
                       leading-relaxed lg:leading-[50px] mt-2"
         >
           The full service we are offering is specifically designed to meet your

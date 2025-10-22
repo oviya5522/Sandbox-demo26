@@ -25,12 +25,12 @@ const Part5 = () => {
   return (
     <div className="bg-white">
       <div className="flex justify-center items-center py-20">
-        <div className="w-5/6 rounded-4xl pt-16 bg-[#f0f0f8] lg:h-[700px]">
+        <div className="w-5/6 rounded-4xl pt-16 bg-[#f0f0f8] lg:h-[650px]">
           <div className="text-center px-6 sm:px-10">
             <p className="text-[#605dba] text-[18px] sm:text-[20px] font-semibold">
               Happy Customers
             </p>
-            <p className="text-[#343f52] font-semibold pt-4 leading-tight text-[24px] sm:text-[30px] lg:text-[38px] max-w-[650px] mx-auto">
+            <p className="text-[#343f52] font-semibold pt-4 leading-tight text-[24px] sm:text-[38px] lg:text-[38px] max-w-[650px] mx-auto">
               <span className="block lg:hidden whitespace-pre-line">
                 {
                   "Don't take our\nword for it. See\nwhat customers are saying about\nus."
@@ -71,7 +71,7 @@ const Part5 = () => {
                   {content[activeIndex].role}
                 </p>
 
-                <div className="flex justify-start mt-5 space-x-3">
+                <div className="flex justify-start mt-4 space-x-3">
                   {content.map((_, i) => (
                     <button
                       key={i}

@@ -42,7 +42,7 @@ const Part6 = () => {
             <p className="text-[#605dba] text-[16px] sm:text-[18px] font-semibold">
               Our Pricing
             </p>
-            <p className="text-[#343f52] font-semibold pt-4 leading-tight text-[20px] sm:text-[32px] md:text-[38px] max-w-[400px] sm:max-w-[450px]">
+            <p className="text-[#343f52] font-semibold pt-4 leading-tight text-[25px] sm:text-[40px] md:text-[40px] max-w-[400px] sm:max-w-[450px]">
               We offer great and
               <br /> premium prices.
             </p>
