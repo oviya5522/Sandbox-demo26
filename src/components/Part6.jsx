@@ -108,7 +108,7 @@ const Part6 = () => {
            
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left pt-6 w-full">
                   <div className="flex items-end justify-center lg:justify-start">
-                    <span className="text-xl relative top-[-0.3rem]">$</span>
+                    <span className="text-xl relative top-[-1.5rem]">$</span>
                     <span className="text-6xl font-medium">
                       {isYearly ? plan.yearly : plan.monthly}
                     </span>
