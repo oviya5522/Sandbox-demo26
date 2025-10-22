@@ -64,7 +64,7 @@ const Footer = () => {
         <hr className="my-10 border-gray-200" />
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6">
-          <span className="text-[17px] font-medium text-[#6c7485] text-left md:pl-8">
+          <span className="text-[17px] font-medium text-[#6c7485] text-left md:pl-15">
             © 2024{" "}
             <a className="hover:underline text-[17px] font-medium text-[#6c7485]">
               Sandbox
